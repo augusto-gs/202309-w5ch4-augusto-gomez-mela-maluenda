@@ -1,0 +1,23 @@
+{
+  "name": "202309-w5ch4-augusto-gomez-mela-maluenda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "prepare": "husky install",
+    "start": "node .",
+    "start:dev": "node --watch index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.2",
+    "@commitlint/config-conventional": "^17.7.0",
+    "husky": "^8.0.0",
+    "prettier": "^3.0.3",
+    "lint-staged": "^14.0.1"
+  },
+  "dependencies": {}
+}
