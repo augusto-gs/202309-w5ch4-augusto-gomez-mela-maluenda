@@ -18,6 +18,18 @@ class CodersArray {
     const length = this.length();
     this.elements[length] = addedValues;
   }
+
+  map(callBack) {
+    for (
+      let elementsIndex = 0;
+      elementsIndex < this.length();
+      elementsIndex++
+    ) {
+      this.elements[elementsIndex] = callBack(this.elements[elementsIndex]);
+    }
+
+    return this.elements;
+  }
 }
 
 export default CodersArray;
