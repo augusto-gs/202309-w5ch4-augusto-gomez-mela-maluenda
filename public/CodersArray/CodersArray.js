@@ -13,6 +13,11 @@ class CodersArray {
 
     return numberElements;
   }
+
+  push(addedValues) {
+    const length = this.length();
+    this.elements[length] = addedValues;
+  }
 }
 
 export default CodersArray;
