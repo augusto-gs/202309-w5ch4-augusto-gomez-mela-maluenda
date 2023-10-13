@@ -8,6 +8,7 @@ const ejemplo = new CodersArray(3, 8, 10, 2);
 
 // console.log(ejemplo);
 
-console.log(ejemplo.map((word, position) => word + position));
+console.log(ejemplo.filter((number) => number < 5));
+console.log(ejemplo.map((number) => number * 5));
 
 console.log(2);

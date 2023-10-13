@@ -17,22 +17,40 @@ class CodersArray {
   push(addedValues) {
     const length = this.length();
     this.elements[length] = addedValues;
+
+    return addedValues;
   }
 
   map(callBack) {
+    const arrayVacio = new CodersArray();
     for (
       let elementsIndex = 0;
       elementsIndex < this.length();
       elementsIndex++
     ) {
-      this.elements[elementsIndex] = callBack(
-        this.elements[elementsIndex],
-        elementsIndex,
-        this.elements,
+      arrayVacio.push(
+        callBack(this.elements[elementsIndex], elementsIndex, this.elements),
       );
     }
 
-    return this.elements;
+    return arrayVacio.elements;
+  }
+
+  filter(callBack) {
+    const arrayVacio = new CodersArray();
+    for (
+      let elementsIndex = 0;
+      elementsIndex < this.length();
+      elementsIndex++
+    ) {
+      if (
+        callBack(this.elements[elementsIndex], elementsIndex, this.elements)
+      ) {
+        arrayVacio.push(this.elements[elementsIndex]);
+      }
+    }
+
+    return arrayVacio.elements;
   }
 }
 
