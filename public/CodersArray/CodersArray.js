@@ -25,7 +25,11 @@ class CodersArray {
       elementsIndex < this.length();
       elementsIndex++
     ) {
-      this.elements[elementsIndex] = callBack(this.elements[elementsIndex]);
+      this.elements[elementsIndex] = callBack(
+        this.elements[elementsIndex],
+        elementsIndex,
+        this.elements,
+      );
     }
 
     return this.elements;
